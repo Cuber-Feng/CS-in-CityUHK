@@ -1,0 +1,152 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #F8F0E5;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    background-color: #EADBC8;
+    color: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 60px;
+    z-index: 999;
+}
+
+nav a {
+    color: #102C57;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* 默认：PC 端导航栏在顶部 */
+nav {
+    top: 90px;
+    bottom: auto;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    background-color: #E26A2C;
+    color: white;
+}
+
+/* 手机端：导航栏固定在底部 */
+@media (max-width: 768px) {
+    nav {
+        top: auto;
+        bottom: 0;
+    }
+}
+
+/* 页面内容占位防止导航栏遮挡 */
+main {
+    padding-top: 160px;
+    padding-bottom: 70px;
+    padding-left: 50px;
+    text-align: left;
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+
+#studyplan {
+    border-collapse: collapse;
+    /*width: 100%;*/
+    table-layout: auto;
+}
+
+th,
+td {
+    border: 1px solid #876445;
+    padding: 8px 12px;
+    text-align: center;
+}
+
+th {
+    background-color: #876445;
+    color: white;
+    text-align: center;
+}
+
+tr:hover {
+    background-color: #f0f8ff;
+}
+
+.CourseCard {
+    border: #102C57 solid;
+    display: inline-block;
+    padding: 0 8px;
+    margin: 0 5px 10px 0;
+    border-radius: 30px;
+    background-color: #FFCE45;
+}
+
+.CourseCard h3 {
+    text-align: center;
+    font-family: serif;
+    font-size: xx-large;
+    margin: 10px 0 -10px 0;
+}
+
+@media (max-width: 768px) {
+    .content {
+        padding-top: 90px;
+    }
+
+    #studyplan {
+        max-width: 80vw;
+    }
+
+    .table-scroll {
+        overflow-x: auto;
+        max-width: 95vw;
+    }
+
+    nav {
+        display: none;
+    }
+
+    main {
+        padding-top: 5.2rem;
+        padding-bottom: 2rem;
+        padding-left: 1rem;
+        text-align: left;
+        max-width: 98vw;
+        margin: 0 auto;
+    }
+
+    th,
+    td {
+        border: 0.1rem solid #2b2b2b;
+        padding: 0.5rem 0.1rem;
+        text-align: center;
+    }
+
+    .CourseCard {
+        border: 0;
+        display: inline-block;
+        padding: 0.1rem 0.5rem;
+        margin-bottom: 1rem;
+        border-radius: 1rem;
+        background-color: #FFCE45;
+        text-align: center;
+        cursor: pointer;
+        max-width: 42vw;
+    }
+
+    .CourseCard h3 {
+        text-align: center;
+        font-family: serif;
+        font-size: x-large;
+        margin: 1rem 0 1rem 0;
+    }
+
+    
+}
